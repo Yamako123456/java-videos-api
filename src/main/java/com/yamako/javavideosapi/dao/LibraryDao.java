@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface LibraryDao {
     List<Library> getLibraryies();
-    List<Library> getLibraryiesByOwnerId();
-    List<Library> getLibraryiesByName();
+    List<Library> getLibraryiesByOwnerId(int ownerId);
+    List<Library> getLibraryiesByName(String name, boolean useWildCard);
     Library getLibraryById(int id);
 
 }

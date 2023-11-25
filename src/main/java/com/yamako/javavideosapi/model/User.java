@@ -98,4 +98,20 @@ public class User {
     public void setZip(String zip) {
         this.zip = zip;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
+                ", passwordHash='" + passwordHash + '\'' +
+                ", role='" + role + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", address='" + address + '\'' +
+                ", city='" + city + '\'' +
+                ", stateCode='" + stateCode + '\'' +
+                ", zip='" + zip + '\'' +
+                '}';
+    }
 }

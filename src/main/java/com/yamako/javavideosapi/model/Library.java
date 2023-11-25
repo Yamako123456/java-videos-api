@@ -45,4 +45,14 @@ public class Library {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "libraryId=" + libraryId +
+                ", ownerId=" + ownerId +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }

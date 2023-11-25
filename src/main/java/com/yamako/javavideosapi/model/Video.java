@@ -86,4 +86,17 @@ public class Video {
         this.selected = selected;
     }
 
+    @Override
+    public String toString() {
+        return "Video{" +
+                "videoId=" + videoId +
+                ", libraryId=" + libraryId +
+                ", name='" + name + '\'' +
+                ", url='" + url + '\'' +
+                ", thumbnail='" + thumbnail + '\'' +
+                ", title='" + title + '\'' +
+                ", comment='" + comment + '\'' +
+                ", selected=" + selected +
+                '}';
+    }
 }

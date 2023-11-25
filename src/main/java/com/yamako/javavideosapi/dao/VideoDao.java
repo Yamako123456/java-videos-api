@@ -8,5 +8,6 @@ public interface VideoDao {
     List<Video> getVideos();
     List<Video> getSelectedVideosByLibraryId( int libId);
     Video getVideoById(int id);
+    List<Video> getVideoByName(String name, boolean useWildCard);
 
 }

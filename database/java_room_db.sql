@@ -17,7 +17,7 @@ IF NOT EXISTS( SELECT * from INFORMATION_SCHEMA.Tables WHERE Table_name = 'users
                        email varchar(200) NOT NULL,
                        address varchar(100) NULL,
                        city varchar(50) NULL,
-                       state_code char(2) NULL,
+                       state_code varchar(2) NULL,
                        zip varchar(5) NULL,
                        CONSTRAINT PK_user PRIMARY KEY (user_id)
     );
