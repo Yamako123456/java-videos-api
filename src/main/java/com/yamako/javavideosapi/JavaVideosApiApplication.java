@@ -33,18 +33,35 @@ public class JavaVideosApiApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		List<Video> videos = videoDao.getVideos();
+		//testDao();
+		testRest();
+	}
+
+	private void testRest() {
+		log.info("XXXXXXXXX    Test Rest API -miyoko  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+
+	}
+	private void testDao() {
+		log.info("XXXXXXXXX    Test DAO -miyoko   XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+
+		List<Video> videos = videoDao.getSelectedVideosByLibraryId(1);
 		for (Video video: videos) {
 			log.info(video.toString());
 		}
-		List<Library> libraries = libraryDao.getLibraryies();
+		Video video = videoDao.getVideoById(9);
+		log.info(video.toString());
+		List<Library> libraries = libraryDao.getLibraryiesByName("O", true);
 		for (Library library: libraries) {
 			log.info(library.toString());
 		}
+		Library library = libraryDao.getLibraryById(2);
+		log.info(library.toString());
 		List<User> users = userDao.getUsers();
 		for (User user: users) {
 			log.info(user.toString());
 		}
-
+		User user = userDao.getUserById(2);
+		log.info(user.toString());
 	}
+
 }
